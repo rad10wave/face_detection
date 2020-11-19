@@ -1,0 +1,71 @@
+html, body {
+  margin: 0;
+  text-align: center;
+  background: #000;
+  color: #313131;
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  background-color: #222;
+ font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.5);
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  position: absolute;
+}
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.result-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.result-container > div {
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  margin: 5px 0;
+  color: white;
+  text-transform: capitalize;
+}
+#age {
+  background: #1a1a1a;
+}
+#emotion {
+  background: #202020;
+}
+#gender {
+  background: #1a1a1a;
+}
+video {
+  width: 100%;
+}
+.js-type-writer {
+  font-size: 48px;
+  font-family: sans-serif;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.js-type-writer > span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}

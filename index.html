@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Face recognition App</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    
+    <div class="container">
+      <video id="video" height="350" width="350"  autoplay muted></video>
+    </div>
+    <div class="result-container">
+      <h1 class="js-type-writer" id="load">Please Wait .... <br>Still loading, its slow sometimes :/</h1>
+      <script>
+        const typeWriter = selector => {
+  const el = document.querySelector(selector);
+  const text = el.innerHTML;
+
+  (function _type(i = 0) {
+    if (i === text.length) return;
+
+    el.innerHTML =
+    text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+    setTimeout(() => _type(i + 1), 100);
+  })();
+};
+
+typeWriter(".js-type-writer");
+        </script>
+      <div id="emotion"></div>
+      <div id="gender"></div>
+      <div id="age"></div>
+    </div>
+
+    <script src="./js/face-api.min.js"></script>
+    <script defer src="./js/main.js"></script>
+  </body>
+</html>
